@@ -30,7 +30,6 @@ public class ReadListObjectXML {
 				for(int j=0;j<list2.getLength();j++) {
 					//System.out.println(list2.getLength());//ok  vao duoc notde trong khoa co chiu dai 5 roi
 					Node node2 = list2.item(j);// chu y i voi j nhe
-
 					if(node2.getNodeType()==1) {
 						if(node2.getNodeName().equals("makh")) {
 							makh=node2.getTextContent();
