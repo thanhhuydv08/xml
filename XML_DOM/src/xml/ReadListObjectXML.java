@@ -17,7 +17,7 @@ public class ReadListObjectXML {
 
 	public static void main(String[] args) throws SAXException, IOException {
 		// TODO Auto-generated method stub
-String makh="",tenkh="";
+		String makh="",tenkh="";
 		DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
 		try {
 			DocumentBuilder db = documentBuilderFactory.newDocumentBuilder();
@@ -29,27 +29,28 @@ String makh="",tenkh="";
 				NodeList list2 = node1.getChildNodes();
 				for(int j=0;j<list2.getLength();j++) {
 					//System.out.println(list2.getLength());//ok  vao duoc notde trong khoa co chiu dai 5 roi
-					Node node2 = list2.item(i);
+					Node node2 = list2.item(j);// chu y i voi j nhe
+
 					if(node2.getNodeType()==1) {
 						if(node2.getNodeName().equals("makh")) {
 							makh=node2.getTextContent();
 						}else {tenkh = node2.getTextContent();}
 					}
-					
-				}
-				
-				
-			}
-			System.out.println(makh+"-"+tenkh);
 
-			
+				}
+				System.out.println(makh+"-"+tenkh);
+
+			}
+
+
+
 		} catch (ParserConfigurationException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
-		
+
+
+
 	}
 
 }
